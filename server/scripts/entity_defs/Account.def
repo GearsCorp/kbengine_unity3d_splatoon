@@ -1,0 +1,49 @@
+<root>
+	<Properties>
+		<characters>
+			<Type>			AVATAR_INFOS_LIST		</Type>
+			<Flags>			BASE					</Flags>
+			<Default>								</Default>
+			<Persistent>		true				</Persistent>
+		</characters>
+
+		<activeCharacter>
+			<Type>			ENTITYCALL				</Type>
+			<Flags>			BASE					</Flags>
+		</activeCharacter>
+	</Properties>
+
+	<ClientMethods>
+		<onReqAvatarList>
+			<Arg>			AVATAR_INFOS_LIST	</Arg>
+		</onReqAvatarList>
+
+		<onCreateAvatarResult>
+			<Arg>			AVATAR_INFOS 		</Arg>
+		</onCreateAvatarResult>
+	</ClientMethods>
+
+	<BaseMethods>
+		<reqAvatarList>
+			<Exposed/>
+		</reqAvatarList>
+
+		<reqCreateAvatar>
+			<Exposed/>
+			<Arg>			UINT8				</Arg>	<!-- roleType -->
+			<Arg>			UNICODE				</Arg>	<!-- name -->
+		</reqCreateAvatar>
+
+		<enterGameRoom>
+			<Exposed/>
+			<Arg>			DBID				</Arg>	<!-- roleType -->
+		</enterGameRoom>
+		<destroySelf>
+		</destroySelf>
+
+	</BaseMethods>
+
+	<CellMethods>
+	</CellMethods>
+
+</root>

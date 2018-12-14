@@ -1,0 +1,121 @@
+<root>
+	<OBJECT_ID>			INT32		</OBJECT_ID>
+	<BOOL>				UINT8		</BOOL>
+	<DBID>				UINT64		</DBID>
+	<UID>				UINT64		</UID>
+	<ENTITY_ID>			INT32		</ENTITY_ID>
+	<ROLE_ID>			UINT8		</ROLE_ID>
+	<WEAPON_ID>			INT32		</WEAPON_ID>
+	<NAME>				UNICODE		</NAME>
+	<TEAM_ID>			UINT8		</TEAM_ID>
+	<SPACE_ID>			UINT32		</SPACE_ID>
+	<ROOMPOSITION_ID>	UINT32		</ROOMPOSITION_ID>
+	<POSITION3D>		VECTOR3		</POSITION3D>
+	<DIRECTION3D>		VECTOR3		</DIRECTION3D>
+	<SPACE_KEY>			UINT64		</SPACE_KEY>
+	<ROOMSTATE>			INT32		</ROOMSTATE>
+	<FRAMEID>			UINT32		</FRAMEID>
+	<CMD_TYPE>			UINT8		</CMD_TYPE>
+	<AVATAR_INFOS>	FIXED_DICT
+		<implementedBy>AVATAR_INFOS.avatar_info_inst</implementedBy>
+		<Properties>
+			<dbid>
+				<Type>	DBID	</Type>
+			</dbid>
+			<name>
+				<Type>	NAME	</Type>
+				<DatabaseLength> 256 </DatabaseLength>
+			</name>
+			<roleType>
+				<Type>	ROLE_ID	</Type>
+			</roleType>
+			<weaponId>
+				<Type>	WEAPON_ID	</Type>
+			</weaponId>
+		</Properties>
+	</AVATAR_INFOS>
+
+	<AVATAR_INFOS_LIST>	FIXED_DICT
+		<implementedBy>AVATAR_INFOS.avatar_info_list_inst</implementedBy>
+		<Properties>
+			<values>
+				<Type>	ARRAY <of> AVATAR_INFOS </of>	</Type>
+			</values>
+		</Properties>
+	</AVATAR_INFOS_LIST>
+
+	<MATCHING_INFOS>	FIXED_DICT
+		<implementedBy>MATCHING_INFOS.matching_info_inst</implementedBy>
+		<Properties>
+			<id>
+				<Type>	ENTITY_ID	</Type>
+			</id>
+			<name>
+				<Type>	NAME	</Type>
+				<DatabaseLength> 256 </DatabaseLength>
+			</name>
+			<roleType>
+				<Type>	ROLE_ID	</Type>
+			</roleType>
+			<weaponId>
+				<Type>	WEAPON_ID	</Type>
+			</weaponId>
+			<roomId>
+				<Type>	UINT8	</Type>
+			</roomId>
+			<roomPosition>
+				<Type>	UINT8	</Type>
+			</roomPosition>
+			<teamId>
+				<Type>	UINT8	</Type>
+			</teamId>
+		</Properties>
+	</MATCHING_INFOS>
+
+	<MATCHING_INFOS_LIST>	FIXED_DICT
+		<implementedBy>MATCHING_INFOS.matching_info_list_inst</implementedBy>
+		<Properties>
+			<values>
+				<Type>	ARRAY <of> MATCHING_INFOS </of>	</Type>
+			</values>
+		</Properties>
+	</MATCHING_INFOS_LIST>
+
+
+    <FS_ENTITY_DATA>	FIXED_DICT
+		<implementedBy>FS_ENTITY_DATA.inst</implementedBy>
+		<Properties>
+			<entityid>
+				<Type>	ENTITY_ID	</Type>
+			</entityid>
+			<cmd_type>
+				<Type>	CMD_TYPE	</Type>
+			</cmd_type>
+			<datas>
+				<Type>	BLOB	</Type>
+			</datas>
+		</Properties>
+	</FS_ENTITY_DATA>
+
+
+	<FS_FRAME_DATA>	FIXED_DICT
+		<implementedBy>FS_FRAME_DATA.inst</implementedBy>
+		<Properties>
+			<frameid>
+				<Type>	FRAMEID	</Type>
+			</frameid>
+			<operation>
+				<Type>	ARRAY <of> FS_ENTITY_DATA </of> </Type>
+			</operation>
+		</Properties>
+	</FS_FRAME_DATA>
+
+	<FS_FRAME_LIST>	FIXED_DICT
+		<implementedBy>FS_FRAME_LIST.inst</implementedBy>
+		<Properties>
+			<values>
+				<Type>	ARRAY <of> FS_FRAME_DATA </of>	</Type>
+			</values>
+		</Properties>
+	</FS_FRAME_LIST>
+</root>

@@ -1,0 +1,210 @@
+{
+	"states": ["HUMAN_IDLE", "HUMAN_MOVE", "INKFISH_IDLE", "INKFISH_MOVE", "INKFISHDIVE_IDLE", "INKFISHDIVE_MOVE"],
+	"default_state": "HUMAN_IDLE",
+	"default_params": [
+		"IsMove|bool|false",
+		"AvatarForm|int|1"
+	],	
+	"transitions": [
+		{
+			"origin": "INKFISH_IDLE",
+			"dest": "HUMAN_IDLE",
+			"duration": 0.0,
+			"conditions": [
+				{
+					"fileName": "bulidCondition",
+					"paramDatas":["AvatarForm:1"]
+				}
+			]
+		},
+		{
+			"origin": "INKFISHDIVE_IDLE",
+			"dest": "HUMAN_IDLE",
+			"duration": 0.0,
+			"conditions": [
+				{
+					"fileName": "bulidCondition",
+					"paramDatas":["AvatarForm:1"]
+				}
+			]
+		},
+		{
+			"origin": "HUMAN_IDLE",
+			"dest": "INKFISH_IDLE",
+			"duration": 0.0,
+			"conditions": [
+				{
+					"fileName": "bulidCondition",
+					"paramDatas":["AvatarForm:2"]
+				}
+			]
+		},
+		{
+			"origin": "INKFISHDIVE_IDLE",
+			"dest": "INKFISH_IDLE",
+			"duration": 0.0,
+			"conditions": [
+				{
+					"fileName": "bulidCondition",
+					"paramDatas":["AvatarForm:2"]
+				}
+			]
+		},
+		{
+			"origin": "HUMAN_IDLE",
+			"dest": "INKFISHDIVE_IDLE",
+			"duration": 0.0,
+			"conditions": [
+				{
+					"fileName": "bulidCondition",
+					"paramDatas":["AvatarForm:3"]
+				}
+			]
+		},
+		{
+			"origin": "INKFISH_IDLE",
+			"dest": "INKFISHDIVE_IDLE",
+			"duration": 0.0,
+			"conditions": [
+				{
+					"fileName": "bulidCondition",
+					"paramDatas":["AvatarForm:3"]
+				}
+			]
+		},
+		{
+			"origin": "HUMAN_IDLE",
+			"dest": "HUMAN_MOVE",
+			"duration": 0.0,
+			"conditions": [
+				{
+					"fileName": "bulidCondition",
+					"paramDatas":["IsMove:true","AvatarForm:1"]
+				}
+			]
+		},
+		{
+			"origin": "INKFISH_MOVE",
+			"dest": "HUMAN_MOVE",
+			"duration": 0.0,
+			"conditions": [
+				{
+					"fileName": "bulidCondition",
+					"paramDatas":["IsMove:true","AvatarForm:1"]
+				}
+			]
+		},
+		{
+			"origin": "INKFISHDIVE_MOVE",
+			"dest": "HUMAN_MOVE",
+			"duration": 0.0,
+			"conditions": [
+				{
+					"fileName": "bulidCondition",
+					"paramDatas":["IsMove:true","AvatarForm:1"]
+				}
+			]
+		},
+		
+		{
+			"origin": "HUMAN_MOVE",
+			"dest": "HUMAN_IDLE",
+			"duration": 0.0,
+			"conditions": [
+				{
+					"fileName": "bulidCondition",
+					"paramDatas":["IsMove:false","AvatarForm:1"]
+				}
+			]
+		},
+		{
+			"origin": "INKFISH_IDLE",
+			"dest": "INKFISH_MOVE",
+			"duration": 0.0,
+			"conditions": [
+				{
+					"fileName": "bulidCondition",
+					"paramDatas":["IsMove:true","AvatarForm:2"]
+				}
+			]
+		},
+		{
+			"origin": "HUMAN_MOVE",
+			"dest": "INKFISH_MOVE",
+			"duration": 0.0,
+			"conditions": [
+				{
+					"fileName": "bulidCondition",
+					"paramDatas":["IsMove:true","AvatarForm:2"]
+				}
+			]
+		},
+		{
+			"origin": "INKFISHDIVE_MOVE",
+			"dest": "INKFISH_MOVE",
+			"duration": 0.0,
+			"conditions": [
+				{
+					"fileName": "bulidCondition",
+					"paramDatas":["IsMove:true","AvatarForm:2"]
+				}
+			]
+		},
+		{
+			"origin": "INKFISH_MOVE",
+			"dest": "INKFISH_IDLE",
+			"duration": 0.0,
+			"conditions": [
+				{
+					"fileName": "bulidCondition",
+					"paramDatas":["IsMove:false","AvatarForm:2"]
+				}
+			]
+		},
+		{
+			"origin": "INKFISHDIVE_IDLE",
+			"dest": "INKFISHDIVE_MOVE",
+			"duration": 0.0,
+			"conditions": [
+				{
+					"fileName": "bulidCondition",
+					"paramDatas":["IsMove:true","AvatarForm:3"]
+				}
+			]
+		},
+		{
+			"origin": "HUMAN_MOVE",
+			"dest": "INKFISHDIVE_MOVE",
+			"duration": 0.0,
+			"conditions": [
+				{
+					"fileName": "bulidCondition",
+					"paramDatas":["IsMove:true","AvatarForm:3"]
+				}
+			]
+		},
+		{
+			"origin": "INKFISH_MOVE",
+			"dest": "INKFISHDIVE_MOVE",
+			"duration": 0.0,
+			"conditions": [
+				{
+					"fileName": "bulidCondition",
+					"paramDatas":["IsMove:true","AvatarForm:3"]
+				}
+			]
+		},
+		{
+			"origin": "INKFISHDIVE_MOVE",
+			"dest": "INKFISHDIVE_IDLE",
+			"duration": 0.0,
+			"conditions": [
+				{
+					"fileName": "bulidCondition",
+					"paramDatas":["IsMove:false","AvatarForm:3"]
+				}
+			]
+		}
+		
+	]
+}

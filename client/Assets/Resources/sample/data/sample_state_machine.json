@@ -1,0 +1,37 @@
+{
+	"states": ["STATE_IDLE", "STATE_MOVE"],
+	"default_state": "STATE_IDLE",
+	"default_params": [
+		"IsMove|bool|false",
+		"AvatarForm|int|1",
+		"AvatarValue|float|10.4"
+	],	
+	"transitions": [
+		{
+			"origin": "STATE_IDLE",
+			"dest": "STATE_MOVE",
+			"duration": 0.0,
+			"conditions": [
+				{
+					"fileName": "bulidCondition",
+					"paramDatas":["IsMove:true","AvatarForm:1"]
+				},
+				{
+					"fileName": "bulidCondition",
+					"paramDatas":["IsMove:true","AvatarForm:2"]
+				}
+			]
+		},
+		{
+			"origin": "STATE_MOVE",
+			"dest": "STATE_IDLE",
+			"duration": 0.0,
+			"conditions": [
+				{
+					"fileName": "bulidCondition",
+					"paramDatas":["IsMove:false","AvatarForm:1"]
+				}
+			]
+		}
+	]
+}

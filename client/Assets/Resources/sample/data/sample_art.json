@@ -1,0 +1,9 @@
+{
+	"1": 
+	{
+		"model":"AAM_SEQUENCE",
+		"begin_conditions" :["TestBeginCondition|int:12,bool:true"],
+		"end_conditions" :["TestEndCondition|int:12,bool:false"],
+		"actions":["TestAction|int:13,bool:false"]
+	}
+}

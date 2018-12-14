@@ -1,0 +1,71 @@
+<root>
+	<Properties>
+	</Properties>
+
+	<ClientMethods>
+	</ClientMethods>
+
+	<BaseMethods>
+		<enterRoom>
+			<Arg>		ENTITYCALL		</Arg>
+			<Arg>		SPACE_KEY		</Arg>
+			<Arg>		TEAM_ID			</Arg>
+		</enterRoom>
+
+		<leaveRoom>
+			<Arg>		ENTITY_ID		</Arg>
+			<Arg>		SPACE_KEY		</Arg>
+			<Arg>		TEAM_ID			</Arg>
+		</leaveRoom>
+		<removeRoom>
+			<Arg>		SPACE_KEY		</Arg>
+		</removeRoom>
+
+		<onRoomLoseCell>
+			<Arg>		SPACE_KEY		</Arg>
+		</onRoomLoseCell>
+
+		<onRoomGetCell>
+			<Arg>		ENTITYCALL		</Arg>
+			<Arg>		SPACE_KEY		</Arg>
+		</onRoomGetCell>
+
+		<onRoomStateChanged>
+			<Arg>		SPACE_KEY		</Arg>
+			<Arg>		ROOMSTATE		</Arg>
+		</onRoomStateChanged>
+
+		<onRoomMinTimeFlagChanged>
+			<Arg>		SPACE_KEY		</Arg>
+			<Arg>		BOOL			</Arg>
+		</onRoomMinTimeFlagChanged>
+
+		<registerHalls>
+			<Arg>		ENTITYCALL		</Arg>
+			<Arg>		NAME			</Arg>
+			<Arg>		ROLE_ID			</Arg>
+			<Arg>		WEAPON_ID		</Arg>
+		</registerHalls>
+
+		<deregisterHalls>
+			<Arg>		ENTITY_ID		</Arg>
+		</deregisterHalls>
+
+		<ifExitHalls>
+			<Arg>		ENTITYCALL		</Arg>
+		</ifExitHalls>
+
+		<enterStartGame>
+			<Arg>		ENTITYCALL		</Arg>
+		</enterStartGame>
+
+		<leaveWaitStartGame>
+			<Arg>		ENTITY_ID		</Arg>
+		</leaveWaitStartGame>
+
+	</BaseMethods>
+
+	<CellMethods>
+	</CellMethods>
+
+</root>
